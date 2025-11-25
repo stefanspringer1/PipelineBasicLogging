@@ -4,6 +4,7 @@ import PipelineLoggingBinding
 import BasicLogging
 
 /// Keeps track of the severity i.e. the worst message type.
+@available(*, deprecated, message: "this package is deprecated, use the repository https://github.com/swiftxml/PipelineBasicLogging instead and note the version number being reset to 1.0.0")
 public final class ConcurrentSeverityTracker: SeverityTracker, @unchecked Sendable {
     
     private var _severity = InfoType.allCases.min()!
@@ -40,6 +41,7 @@ public final class ConcurrentSeverityTracker: SeverityTracker, @unchecked Sendab
 }
 
 /// A logger that just prints to the standard output.
+@available(*, deprecated, message: "this package is deprecated, use the repository https://github.com/swiftxml/PipelineBasicLogging instead and note the version number being reset to 1.0.0")
 public final class LogEntryPrinter: Logger, @unchecked Sendable {
     
     public typealias Message = ExecutionLogEntry
@@ -76,6 +78,7 @@ func printToErrorOut(_ message: CustomStringConvertible) {
 }
 
 /// A logger that just prints to the standard output.
+@available(*, deprecated, message: "this package is deprecated, use the repository https://github.com/swiftxml/PipelineBasicLogging instead and note the version number being reset to 1.0.0")
 public final class PrintLogger<Message: Sendable & CustomStringConvertible,Mode>: ConcurrentLogger<Message,PrintMode>, @unchecked Sendable {
     
     public typealias Message = Message
